@@ -49,6 +49,30 @@ The simulation/decision logic is kept separate from rendering so behavioral mode
 - Fixed random seed for reproducible experiments
 - Basic metrics such as generation, population, and clustering
 
+## Local Development and Check
+
+The simple Life Game is a static HTML/CSS/JavaScript app. It has no npm dependencies or build step; Python 3 is only needed to serve it locally.
+
+Check that Python 3 is available:
+
+```sh
+python3 --version
+```
+
+From the repository root, start the local server:
+
+```sh
+sh simulator/lifegame-simple/run-local.sh
+```
+
+Open <http://127.0.0.1:8000/> in a browser to see the simulation list, then open the Life Game from there. To use a different port:
+
+```sh
+PORT=8080 sh simulator/lifegame-simple/run-local.sh
+```
+
+Then open <http://127.0.0.1:8080/>. Press `Ctrl+C` in the terminal to stop the server. Check the app by opening it from the list, placing cells on the board, advancing one generation, starting and pausing playback, changing the speed, generating a random board, and clearing it. No automated test runner is configured for this standalone app.
+
 ## Documentation
 
 The design notes and behavioral-model implementation backlog are maintained in Notion:
